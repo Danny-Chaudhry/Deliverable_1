@@ -18,8 +18,20 @@ public class GroupOfCards
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
+    private ArrayList<Card> cards;
     private int size;//the size of the grouping
+
+    public GroupOfCards() {
+    }
+
+    public GroupOfCards(ArrayList<Card> cards, int size) {
+        this.cards = cards;
+        this.size = size;
+    }
+    
+    
+    
+    
     
     public GroupOfCards(int givenSize)
     {
@@ -53,5 +65,15 @@ public class GroupOfCards
     public void setSize(int givenSize) {
         size = givenSize;
     }
+
+	public Card pickCard() {
+		// TODO - implement GroupOfCards.pickCard
+		throw new UnsupportedOperationException();
+	}
+
+	public String toString() {
+		// TODO - implement GroupOfCards.toString
+		throw new UnsupportedOperationException();
+	}
     
 }//end class

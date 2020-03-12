@@ -22,5 +22,39 @@ public abstract class Card
     
     @Override
     public abstract String toString();
+
+    public Card(String suit, char number) {
+        this.suit = suit;
+        this.number = number;
+    }
+    
+    
+
+	public String getSuit() {
+		return this.suit;
+	}
+
+	/**
+	 * 
+	 * @param suit
+	 */
+	public void setSuit(String suit) {
+		this.suit = suit;
+	}
+
+	public char getNumber() {
+		return this.number;
+	}
+
+	/**
+	 * 
+	 * @param number
+	 */
+	public void setNumber(char number) {
+		this.number = number;
+	}
+
+	private String suit;
+	private char number;
     
 }
