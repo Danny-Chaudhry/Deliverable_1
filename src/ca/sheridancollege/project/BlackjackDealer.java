@@ -32,6 +32,7 @@ public class BlackjackDealer extends BlackjackPlayer{
 	public void play() {
 		System.out.println("This is "+this.getPlayerID());
 		showPlayerCards();
+                 calculateValueInHand();
 		System.out.println("The total is:"+getValueInHand());
 		
 		while(getValueInHand()<17){

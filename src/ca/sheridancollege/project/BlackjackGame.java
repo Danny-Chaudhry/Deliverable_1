@@ -107,11 +107,11 @@ public class BlackjackGame extends Game {
 					System.out.println(player.getPlayerID()+", your is the same as the dealers, "+ player.getValueInHand());
 					System.out.println("You did not win or lose. It was a draw");
 				}
-				else if(dealer.getValueInHand() < player.getValueInHand()){
+				else if(dealer.getValueInHand() > player.getValueInHand()){
 					System.out.println(player.getPlayerID()+", your score: "+player.getValueInHand()+" is less than the dealers: "+dealer.getValueInHand());
 					System.out.println("Sorry, you have Lost!");
 				}
-				else if(dealer.getValueInHand() > player.getValueInHand()){
+				else if(dealer.getValueInHand() < player.getValueInHand()){
 					System.out.println(player.getPlayerID()+", your score: "+player.getValueInHand()+" is greater than the dealers: "+dealer.getValueInHand());
 					System.out.println("Congradulations, you have Won!");
 				}
@@ -127,7 +127,7 @@ public class BlackjackGame extends Game {
 	/**
 	 * Creates a shuffled deck
 	 */
-	private void createDeck(){
+	public void createDeck(){
 		deck = new BlackjackDeck();
 		deck.shuffle();
 	}
@@ -135,7 +135,7 @@ public class BlackjackGame extends Game {
 	/**
 	 * Creates players
 	 */
-	private void createPlayers(){
+	public void createPlayers(){
 		System.out.println(
 			   "Please enter the the number of players playing."+
 			   "\nEnter a number between " +MIN_PLAYERS+ " and "+ MAX_PLAYERS +", inclusive");
@@ -233,7 +233,7 @@ public class BlackjackGame extends Game {
 				removePlayer(i);
 			}
 			else if(player.getValueInHand()==21){
-				System.out.println("Congradulations, "+player.getPlayerID()+" your total is "+player.getValueInHand()+" , which is exactly 21.\nYou have Won!");
+				System.out.println("Congratulations, "+player.getPlayerID()+" your total is "+player.getValueInHand()+" , which is exactly 21.\nYou have Won!");
 				removePlayer(i);
 			}
 			else{

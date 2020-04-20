@@ -6,6 +6,7 @@
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,10 +19,12 @@ public class PlayerFactory {
 	public static void run(int numOfPlayers, ArrayList<Player> players){
 		//create the dealer
 		players.add(new BlackjackDealer("DEALER"));
+                 Scanner reader = new Scanner(System.in);
 		
 		//creates the right number of players and adds them to the players arraylist
 		for(int i=0;i<numOfPlayers;i++){
-			String playerName = JOptionPane.showInputDialog("Please enter Player "+(i+1)+" name");
+			System.out.println("Please enter Player "+(i+1)+" name");
+                          String playerName = reader.nextLine();
 			if(playerName == null || playerName.equals("")){
 				players.add(new BlackjackPlayer());
 			}
